@@ -20,7 +20,7 @@ const SlipDetails = () => {
 
   const getSlipDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/auth/slip/view-slip/${slipNo}`);
+      const response = await fetch(`https://slip-project-backend.onrender.com/api/auth/slip/view-slip/${slipNo}`);
       const data = await response.json();
       if (response.ok) {
         setSlipDetails(data);

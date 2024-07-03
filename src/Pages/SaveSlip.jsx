@@ -25,7 +25,7 @@ const SaveSlip = () => {
   useEffect(() => {
     const fetchSlipCount = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/auth/slip/count-slip');
+        const response = await fetch('https://slip-project-backend.onrender.com/api/auth/slip/count-slip');
         const data = await response.json();
         if (response.ok) {
           setFormValues(prevState => ({ ...prevState, slipNo: (data.count + 1001).toString() }));
@@ -92,7 +92,7 @@ const SaveSlip = () => {
     };
 
     try {
-      const response = await fetch(`http://localhost:3000/api/auth/slip/save-slip`, {
+      const response = await fetch(`https://slip-project-backend.onrender.com/api/auth/slip/save-slip`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -110,19 +110,8 @@ const SaveSlip = () => {
     }
   };
 
-  if (!isLoggedIn) {
-    return (
-      <Container className="py-4">
-        <Row className="justify-content-center">
-          <Col xs={12} md={8}>
-            <div className="text-center">
-              <h2>Please log in to access this page.</h2>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
+  
+  
 
   return (
     <Container className="py-4">

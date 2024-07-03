@@ -12,7 +12,7 @@ const SlipHistory = () => {
   const { isLoggedIn } = useAuth(); // Use useAuth hook to check if user is logged in
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/auth/slip/view-slip-data')
+    fetch(`https://slip-project-backend.onrender.com/api/auth/slip/view-slip-data`)
       .then((response) => response.json())
       .then((data) => {
         setSlipData(data);
@@ -45,7 +45,7 @@ const SlipHistory = () => {
 
   const handleGetDetails = (slipNo) => {
     const newWindow = window.open('', '_blank');
-    fetch(`http://localhost:3000/api/auth/slip/view-slip/${slipNo}`)
+    fetch(`https://slip-project-backend.onrender.com/api/auth/slip/view-slip/${slipNo}`)
       .then((response) => response.json())
       .then((slipDetails) => {
         if (slipDetails) {
