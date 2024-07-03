@@ -1,0 +1,108 @@
+.fs-4 {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+.login-container {
+  display: flex;
+  height: 100vh; /* Full-screen */
+}
+
+.login-content {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form {
+  max-width: 400px; /* Adjust width as needed */
+  width: 100%;
+}
+
+.form-container {
+  text-align: center;
+}
+
+.input-container {
+  text-align: center;
+}
+
+.form-control {
+  width: calc(100% - 40px); /* Adjust width to match heading width */
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background-color: #23272b;
+}
+
+.login-image-container {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center image vertically */
+  overflow: hidden; /* Ensure the image does not overflow */
+}
+
+.login-image {
+  max-height: calc(100vh - 64px); /* Adjust height to fit remaining space after subtracting navbar height */
+  width: auto;
+  max-width: 100%; /* Ensure image does not overflow */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.slide-in {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease-in-out forwards;
+}
